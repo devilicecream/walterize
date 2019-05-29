@@ -5,7 +5,7 @@ Special thanks to Gas (gas@ovalmoney.com)
 from setuptools import find_packages, setup
 
 project = "walterize"
-version = "0.0.2"
+version = "0.0.3"
 
 setup(
     name=project,
@@ -20,6 +20,9 @@ setup(
     install_requires=[],
     setup_requires=["nose>=1.3.6"],
     dependency_links=[],
-    entry_points={},
+    entry_points="""\
+    [console_scripts]
+    walterize = walterize.cli:walterize_cli
+    """,
     extras_require={"test": ["coverage>=3.7.1", "mock>=1.0.1", "PyHamcrest>=1.8.5"]},
 )
